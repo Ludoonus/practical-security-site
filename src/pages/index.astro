@@ -8,9 +8,9 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog'))
   .filter(p => p.data.status !== 'draft' || true)
   .sort((a, b) => {
-    const dateA = new Date(a.data.pubDate ?? a.data.date ?? 0);
-    const dateB = new Date(b.data.pubDate ?? b.data.date ?? 0);
-    return dateB.valueOf() - dateA.valueOf();
+    const dateA = a.data.pubDate ?? a.data.date ?? new Date(0);
+    const dateB = b.data.pubDate ?? b.data.date ?? new Date(0);
+    return new Date(dateB).valueOf() - new Date(dateA).valueOf();
   });
 ---
 <!doctype html>
