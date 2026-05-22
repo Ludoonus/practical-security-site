@@ -1,5 +1,6 @@
 ﻿---
 title: "eJPT Certification Review 2026"
+pubDate: 2026-05-21
 date: 2026-05-21
 keyword: "eJPT certification review 2026"
 status: draft
